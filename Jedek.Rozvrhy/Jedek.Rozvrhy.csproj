@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A65ADA8A-F7CA-454A-A2A0-C58CD3C48EB5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jedek.Rozvrhy</RootNamespace>
+    <AssemblyName>Jedek.Rozvrhy</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\Application.cs" />
+    <Compile Include="App\Controllers\MenuController.cs" />
+    <Compile Include="App\Controllers\MistnostController.cs" />
+    <Compile Include="App\Controllers\PredmetController.cs" />
+    <Compile Include="App\Controllers\PrihlaseniController.cs" />
+    <Compile Include="App\Controllers\RozvrhovaAkceController.cs" />
+    <Compile Include="App\Controllers\SettingController.cs" />
+    <Compile Include="App\Controllers\ShutdownController.cs" />
+    <Compile Include="App\Controllers\StudijniSkupinaController.cs" />
+    <Compile Include="App\Controllers\StudentController.cs" />
+    <Compile Include="App\Controllers\StudijniOborController.cs" />
+    <Compile Include="App\Controllers\UzivatelController.cs" />
+    <Compile Include="App\Controllers\VyucujiciController.cs" />
+    <Compile Include="App\Forms\EditMistnostForm.cs" />
+    <Compile Include="App\Forms\EditPredmetForm.cs" />
+    <Compile Include="App\Forms\EditStudentForm.cs" />
+    <Compile Include="App\Forms\EditStudijniOborForm.cs" />
+    <Compile Include="App\Forms\EditVyucujiciForm.cs" />
+    <Compile Include="App\Forms\Form.cs" />
+    <Compile Include="App\Forms\MistnostForm.cs" />
+    <Compile Include="App\Forms\PredmetForm.cs" />
+    <Compile Include="App\Forms\PrihlaseniForm.cs" />
+    <Compile Include="App\Forms\RozvrhovaAkceForm.cs" />
+    <Compile Include="App\Forms\StudentForm.cs" />
+    <Compile Include="App\Forms\StudijniOborForm.cs" />
+    <Compile Include="App\Forms\VyucujiciForm.cs" />
+    <Compile Include="App\Models\CSVDatabaze.cs" />
+    <Compile Include="App\Models\MenuItem.cs" />
+    <Compile Include="App\Models\MenuManager.cs" />
+    <Compile Include="App\Models\Mistnost.cs" />
+    <Compile Include="App\Models\MistnostManager.cs" />
+    <Compile Include="App\Models\Osoba.cs" />
+    <Compile Include="App\Models\PocitacovaMistnost.cs" />
+    <Compile Include="App\Models\Predmet.cs" />
+    <Compile Include="App\Models\PredmetManager.cs" />
+    <Compile Include="App\Models\PrednaskovaMistnost.cs" />
+    <Compile Include="App\Models\RozvrhovaAkce.cs" />
+    <Compile Include="App\Models\RozvrhovaAkceManager.cs" />
+    <Compile Include="App\Models\SeminarniMistnost.cs" />
+    <Compile Include="App\Models\SessionDatabaze.cs" />
+    <Compile Include="App\Models\StudijniSkupina.cs" />
+    <Compile Include="App\Models\StudijniSkupinaManager.cs" />
+    <Compile Include="App\Models\Student.cs" />
+    <Compile Include="App\Models\StudentManager.cs" />
+    <Compile Include="App\Models\StudijniObor.cs" />
+    <Compile Include="App\Models\StudijniOborManager.cs" />
+    <Compile Include="App\Models\UzivatelManager.cs" />
+    <Compile Include="App\Models\Vyucujici.cs" />
+    <Compile Include="App\Models\VyucujiciManager.cs" />
+    <Compile Include="App\Models\XMLDatabaze.cs" />
+    <Compile Include="App\Views\Menu\Default.cs" />
+    <Compile Include="App\Views\Mistnost\Default.cs" />
+    <Compile Include="App\Views\Mistnost\PridejMistnost.cs" />
+    <Compile Include="App\Views\Mistnost\VypisMistnosti.cs" />
+    <Compile Include="App\Views\Predmet\Default.cs" />
+    <Compile Include="App\Views\Predmet\PrednasejiciPredmetu.cs" />
+    <Compile Include="App\Views\Predmet\PridejPredmet.cs" />
+    <Compile Include="App\Views\Predmet\VedouciSeminarePredmetu.cs" />
+    <Compile Include="App\Views\Predmet\VypisPredmety.cs" />
+    <Compile Include="App\Views\Predmet\CviciciPredmetu.cs" />
+    <Compile Include="App\Views\Prihlaseni\Default.cs" />
+    <Compile Include="App\Views\Prihlaseni\OdhlasUzivatele.cs" />
+    <Compile Include="App\Views\RozvrhovaAkce\Default.cs" />
+    <Compile Include="App\Views\RozvrhovaAkce\PridejRozvrhovouAkci.cs" />
+    <Compile Include="App\Views\RozvrhovaAkce\VypisRozvrhoveAkce.cs" />
+    <Compile Include="App\Views\Setting\Default.cs" />
+    <Compile Include="App\Views\Shutdown\Default.cs" />
+    <Compile Include="App\Views\Student\Default.cs" />
+    <Compile Include="App\Views\Student\PredmetyStudenta.cs" />
+    <Compile Include="App\Views\Student\PridejStudenta.cs" />
+    <Compile Include="App\Views\Student\VypisStudenty.cs" />
+    <Compile Include="App\Views\StudijniObor\Default.cs" />
+    <Compile Include="App\Views\StudijniObor\PredmetyOboru.cs" />
+    <Compile Include="App\Views\StudijniObor\PridejStudijniObor.cs" />
+    <Compile Include="App\Views\StudijniObor\VypisObory.cs" />
+    <Compile Include="App\Views\StudijniSkupina\Default.cs" />
+    <Compile Include="App\Views\StudijniSkupina\StudentiSkupiny.cs" />
+    <Compile Include="App\Views\StudijniSkupina\VypisStudijniSkupinyPredmetu.cs" />
+    <Compile Include="App\Views\StudijniSkupina\VytvorStudijniSkupiny.cs" />
+    <Compile Include="App\Views\Uzivatel\Default.cs" />
+    <Compile Include="App\Views\Vyucujici\Default.cs" />
+    <Compile Include="App\Views\Vyucujici\PridejVyucujiciho.cs" />
+    <Compile Include="App\Views\Vyucujici\VypisVyucujici.cs" />
+    <Compile Include="Libs\Container.cs" />
+    <Compile Include="Libs\Controller.cs" />
+    <Compile Include="Libs\ControllerFactory.cs" />
+    <Compile Include="Libs\Databaze.cs" />
+    <Compile Include="Libs\IDatabaze.cs" />
+    <Compile Include="Libs\IView.cs" />
+    <Compile Include="Libs\Model.cs" />
+    <Compile Include="Libs\Uzivatel.cs" />
+    <Compile Include="Libs\View.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
